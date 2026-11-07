@@ -1,0 +1,16 @@
+services:
+  jenkins:
+    build:
+      context: ./jenkins
+    container_name: jsonbin-jenkins
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      # read from the .env file next to this compose file
+      - JSONBIN_MASTER_KEY=${JSONBIN_MASTER_KEY}
+    volumes:
+      - jenkins_home:/var/jenkins_home
+
+volumes:
+  jenkins_home:

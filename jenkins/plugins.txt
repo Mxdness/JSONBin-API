@@ -1,0 +1,5 @@
+git
+workflow-aggregator
+credentials-binding
+configuration-as-code
+allure-jenkins-plugin

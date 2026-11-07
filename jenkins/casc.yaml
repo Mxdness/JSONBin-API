@@ -1,0 +1,22 @@
+jenkins:
+  systemMessage: "JSONBin BDD lab"
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - string:
+              scope: GLOBAL
+              id: "jsonbin-master-key"
+              description: "JSONBin X-Master-Key"
+              secret: "${JSONBIN_MASTER_KEY}"
+
+tool:
+  allure:
+    installations:
+      - name: "allure"
+        properties:
+          - installSource:
+              installers:
+                - allureCommandlineInstaller:
+                    id: "2.29.0"
