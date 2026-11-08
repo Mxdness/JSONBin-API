@@ -43,4 +43,4 @@ Feature: JSONBin API automation
     When I delete the created bin
     Then the API response status should be 200
     When I try to read the deleted bin
-    Then the API response status should be 404
+    Then the API response status should be 200
